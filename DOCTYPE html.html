@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malikscrap | Best Scrap Dealer in Delhi NCR</title>
+  <meta name="description" content="Malikscrap - Best Scrap Dealer in Delhi NCR for Copper, Aluminium, Iron and all kinds of scrap. Call Aasif Malik 7055423238, Haris Malik 7078162313" />
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#111824;
+      --card2:#0f1622;
+      --text:#e9eef7;
+      --muted:#b9c4d6;
+      --accent:#ffb000;
+      --accent2:#2ee59d;
+      --line:rgba(255,255,255,.08);
+      --shadow: 0 20px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(255,176,0,.12), transparent 55%),
+                  radial-gradient(900px 700px at 80% 20%, rgba(46,229,157,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{
+      width:min(1120px, 92%);
+      margin:0 auto;
+    }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,20,.65);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .logo{
+      width:38px;
+      height:38px;
+      border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), #ff6a00);
+      display:grid;
+      place-items:center;
+      box-shadow: 0 14px 40px rgba(255,176,0,.20);
+      font-weight:900;
+      color:#101010;
+    }
+    nav ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+    nav a{
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:12px;
+      transition:.2s;
+    }
+    nav a:hover{
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+    }
+
+    /* Buttons */
+    .btns{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:11px 14px;
+      border-radius:14px;
+      font-weight:800;
+      font-size:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      transition:.2s;
+      cursor:pointer;
+      box-shadow: none;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.06)}
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), #ff6a00);
+      border:none;
+      color:#141414;
+    }
+    .btn.whatsapp{
+      background: linear-gradient(135deg, var(--accent2), #10b981);
+      border:none;
+      color:#062015;
+    }
+    .btn.small{padding:10px 12px; font-size:13px}
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      background: rgba(255,255,255,.03);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    /* Hero */
+    .hero{
+      padding:54px 0 18px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .hero-card{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:28px;
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(700px 300px at 20% 0%, rgba(255,176,0,.14), transparent 60%),
+                  radial-gradient(700px 300px at 90% 20%, rgba(46,229,157,.10), transparent 60%);
+      pointer-events:none;
+    }
+    .hero-card > *{position:relative}
+    h1{
+      margin:12px 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.1;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      color:var(--muted);
+      font-size: clamp(15px, 1.6vw, 18px);
+      margin:0 0 18px;
+      max-width: 62ch;
+    }
+    .hero-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .mini{
+      display:grid;
+      gap:12px;
+    }
+    .mini .card{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    .mini h3{
+      margin:0 0 6px;
+      font-size:16px;
+    }
+    .mini p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* Sections */
+    section{
+      padding:34px 0;
+    }
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:16px;
+    }
+    .section-title h2{
+      margin:0;
+      font-size:26px;
+      letter-spacing:-.4px;
+    }
+    .section-title p{
+      margin:0;
+      color:var(--muted);
+      max-width:60ch;
+      font-size:14px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+    }
+    .card{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    .card h3{
+      margin:0 0 6px;
+      font-size:16px;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:start;
+    }
+    label{
+      display:block;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:700;
+      margin:12px 0 6px;
+    }
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      outline:none;
+      font-size:14px;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .form-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .note{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Footer */
+    footer{
+      padding:26px 0 40px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns: repeat(2, 1fr)}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    @media (max-width: 520px){
+      nav ul{display:none}
+      .grid{grid-template-columns:1fr}
+      .form-row{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">M</div>
+          <div>
+            <div style="font-size:16px;">Malikscrap</div>
+            <div style="font-size:12px; color:var(--muted); font-weight:700;">Delhi NCR Scrap Dealer</div>
+          </div>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#materials">Our Materials</a></li>
+            <li><a href="#area">Service Area</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="btns">
+          <a class="btn small primary" href="tel:+917055423238">Call: 7055423238</a>
+          <a class="btn small" href="tel:+917078162313">Call: 7078162313</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-card">
+          <span class="pill">♻ Scrap • Metal • Recycling</span>
+          <h1>Best Scrap Dealer in Delhi NCR</h1>
+          <p class="sub">Copper, Aluminium, Iron & All Kind of Scrap — fair rates, quick pickup, and trusted dealing across Delhi NCR.</p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="tel:+917055423238">📞 Call Aasif Malik</a>
+            <a class="btn" href="tel:+917078162313">📞 Call Haris Malik</a>
+            <a class="btn whatsapp" target="_blank"
+              href="https://wa.me/917055423238?text=Hello%20Malikscrap%2C%20I%20want%20to%20sell%20scrap%20in%20Delhi%20NCR.%20Please%20contact%20me.">
+              💬 WhatsApp
+            </a>
+          </div>
+
+          <div class="note">Proprietor: <b>Aasif Malik</b> • Delhi NCR • Quick Response</div>
+        </div>
+
+        <div class="mini">
+          <div class="card">
+            <h3>✅ Best Rates</h3>
+            <p>We provide genuine market rates for all types of metal scrap.</p>
+          </div>
+          <div class="card">
+            <h3>🚚 Fast Pickup</h3>
+            <p>Pickup available across Delhi NCR for bulk scrap deals.</p>
+          </div>
+          <div class="card">
+            <h3>🤝 Trusted Dealer</h3>
+            <p>Professional and transparent dealing for businesses & individuals.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>About Malikscrap</h2>
+          <p>Malikscrap is a trusted scrap dealer based in Delhi NCR. We deal in copper, aluminium, iron and all kinds of scrap with fair pricing and professional service.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>🧑‍💼 Proprietor</h3>
+          <p><b>Aasif Malik</b></p>
+        </div>
+        <div class="card">
+          <h3>📍 Location</h3>
+          <p>Delhi NCR</p>
+        </div>
+        <div class="card">
+          <h3>♻ Material Types</h3>
+          <p>Copper, Aluminium, Iron & All Scrap</p>
+        </div>
+        <div class="card">
+          <h3>📞 Quick Contact</h3>
+          <p>7055423238 • 7078162313</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials -->
+  <section id="materials">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>Our Materials</h2>
+          <p>We purchase and deal in multiple categories of scrap and metal materials.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>🔶 Copper Scrap</h3>
+          <p>High value copper scrap buying at best market rates.</p>
+        </div>
+        <div class="card">
+          <h3>⚪ Aluminium Scrap</h3>
+          <p>All types of aluminium scrap purchase and dealing.</p>
+        </div>
+        <div class="card">
+          <h3>⚫ Iron Scrap</h3>
+          <p>Industrial and household iron scrap buying in bulk.</p>
+        </div>
+        <div class="card">
+          <h3>♻ All Kind of Scrap</h3>
+          <p>Mixed scrap, metal waste, factory scrap, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section id="area">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>Delhi NCR Service Area</h2>
+          <p>We deal across Delhi NCR for bulk scrap deals and regular customers.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Delhi</h3>
+          <p>All major areas covered</p>
+        </div>
+        <div class="card">
+          <h3>Noida</h3>
+          <p>Pickup available</p>
+        </div>
+        <div class="card">
+          <h3>Gurgaon</h3>
+          <p>Business & factory deals</p>
+        </div>
+        <div class="card">
+          <h3>Ghaziabad</h3>
+          <p>Regular service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>Contact Us</h2>
+          <p>Call or WhatsApp us for rates, pickup, or bulk scrap deals.</p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Card -->
+        <div class="card">
+          <h3>📞 Direct Contact</h3>
+          <p style="color:var(--muted); margin-top:6px;">
+            <b>Proprietor:</b> Aasif Malik<br/>
+            <b>Phone:</b> <a href="tel:+917055423238">7055423238</a><br/>
+            <b>Haris Malik:</b> <a href="tel:+917078162313">7078162313</a>
+          </p>
+
+          <div class="hero-actions" style="margin-top:14px;">
+            <a class="btn primary" href="tel:+917055423238">📞 Call 7055423238</a>
+            <a class="btn" href="tel:+917078162313">📞 Call 7078162313</a>
+            <a class="btn whatsapp" target="_blank"
+              href="https://wa.me/917078162313?text=Hello%20Malikscrap%2C%20I%20want%20to%20sell%20scrap%20in%20Delhi%20NCR.%20Please%20contact%20me.">
+              💬 WhatsApp
+            </a>
+          </div>
+
+          <div class="note">Working Area: Delhi NCR • Copper • Aluminium • Iron • All Scrap</div>
+        </div>
+
+        <!-- Inquiry Form -->
+        <div class="card">
+          <h3>📝 Inquiry Form</h3>
+
+          <form id="inquiryForm">
+            <div class="form-row">
+              <div>
+                <label>Name</label>
+                <input required type="text" id="name" placeholder="Enter your name" />
+              </div>
+              <div>
+                <label>Phone</label>
+                <input required type="tel" id="phone" placeholder="Enter phone number" />
+              </div>
+            </div>
+
+            <label>Material Type</label>
+            <select id="material" required>
+              <option value="">Select material</option>
+              <option>Copper</option>
+              <option>Aluminium</option>
+              <option>Iron</option>
+              <option>All Kind of Scrap</option>
+              <option>Mixed Scrap</option>
+              <option>Other</option>
+            </select>
+
+            <label>Location</label>
+            <input required type="text" id="location" placeholder="Delhi / Noida / Gurgaon / Ghaziabad..." />
+
+            <label>Message</label>
+            <textarea id="message" placeholder="Write your requirement..."></textarea>
+
+            <button class="btn primary" type="submit" style="width:100%; margin-top:14px;">
+              Send Inquiry on WhatsApp
+            </button>
+
+            <div class="note">This form will open WhatsApp with your message automatically.</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> <b>Malikscrap</b> — Delhi NCR Scrap Dealer</div>
+        <div>Proprietor: Aasif Malik • 7055423238 • 7078162313</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // WhatsApp Form Submit
+    document.getElementById("inquiryForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const material = document.getElementById("material").value.trim();
+      const location = document.getElementById("location").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const text =
+        `Hello Malikscrap,%0A` +
+        `Name: ${encodeURIComponent(name)}%0A` +
+        `Phone: ${encodeURIComponent(phone)}%0A` +
+        `Material: ${encodeURIComponent(material)}%0A` +
+        `Location: ${encodeURIComponent(location)}%0A` +
+        `Message: ${encodeURIComponent(message)}`;
+
+      // Send to Aasif Malik by default
+      const whatsappNumber = "917055423238";
+
+      window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
+    });
+  </script>
+
+</body>
+</html>
